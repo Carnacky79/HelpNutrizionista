@@ -15,6 +15,7 @@ namespace HelpNutrizionista
     {
         private static OleDbConnection conn = new OleDbConnection("provider = Microsoft.Jet.OLEDB.4.0; Data Source = 'C:\\Users\\carna\\Desktop\\tabella_alimenti.xls'; Extended properties = Excel 8.0");
         private static DataSet dt = new DataSet();
+        private static DataTable ds = new DataTable();
         private static OleDbDataAdapter command;
         public Form1()
         {
@@ -23,15 +24,21 @@ namespace HelpNutrizionista
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            fillDataset();
+            fillCombobox(cbAlimenti1);
         }
 
-        private void fillDataset()
+        private void fillCombobox(ComboBox cb)
         {
             command = new OleDbDataAdapter("Select * From [Foglio1$]", conn);
-            command.TableMappings.Add("Table", "TestTable");
-            command.Fill(dt);
-            dataGridView1.DataSource = dt.Tables[0];
+            command.TableMappings.Add("Table", "Alimenti");
+            command.Fill(ds);
+
+            cb.Text = "--Seleziona un Alimento--";
+
+            cb.DataSource = ds;
+            cb.DisplayMember = "Descrizione";
+            cb.ValueMember = "ID";
+
             conn.Close();
         }
     }
