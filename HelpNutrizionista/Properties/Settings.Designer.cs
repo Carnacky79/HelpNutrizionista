@@ -22,15 +22,5 @@ namespace HelpNutrizionista.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"Driver={Driver do Microsoft Excel(*.xls)};dbq=C:\Users\carna\Desktop\tabella_alimenti.xls;defaultdir=C:\Users\carna\Desktop;driverid=790;fil=excel 8.0;filedsn=C:\Users\carna\Desktop\tabella_alimenti.xls.dsn;maxbuffersize=2048;maxscanrows=8;pagetimeout=5;readonly=1;safetransactions=0;threads=3;uid=admin;usercommitsync=Yes")]
-        public string ConnectionString {
-            get {
-                return ((string)(this["ConnectionString"]));
-            }
-        }
     }
 }
