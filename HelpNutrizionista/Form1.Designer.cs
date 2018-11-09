@@ -39,19 +39,22 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnCalcola = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCalorie = new System.Windows.Forms.TextBox();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.txtProteine = new System.Windows.Forms.TextBox();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.txtGrassi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSaturi = new System.Windows.Forms.TextBox();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label7 = new System.Windows.Forms.Label();
             this.txtTotCal = new System.Windows.Forms.TextBox();
             this.txtTotProt = new System.Windows.Forms.TextBox();
@@ -59,10 +62,7 @@
             this.txtTotSat = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtColest = new System.Windows.Forms.TextBox();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtTotCol = new System.Windows.Forms.TextBox();
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label9 = new System.Windows.Forms.Label();
             this.txtCarb = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -76,6 +76,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,7 +126,7 @@
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(89, 405);
+            this.btnAggiungi.Location = new System.Drawing.Point(353, 405);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(59, 28);
             this.btnAggiungi.TabIndex = 6;
@@ -180,9 +181,50 @@
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader4.Width = 90;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Kcal";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Proteine (g)";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader6.Width = 72;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Grassi (g)";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader7.Width = 63;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Di cui Saturi (g)";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader8.Width = 90;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Colesterolo (mg)";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader9.Width = 90;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Carboidrati (g)";
+            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader10.Width = 79;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Zuccheri (g)";
+            this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader11.Width = 81;
+            // 
             // btnCalcola
             // 
-            this.btnCalcola.Location = new System.Drawing.Point(12, 405);
+            this.btnCalcola.Location = new System.Drawing.Point(276, 405);
             this.btnCalcola.Name = "btnCalcola";
             this.btnCalcola.Size = new System.Drawing.Size(59, 28);
             this.btnCalcola.TabIndex = 8;
@@ -208,11 +250,6 @@
             this.txtCalorie.TabIndex = 9;
             this.txtCalorie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Kcal";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -230,12 +267,6 @@
             this.txtProteine.Size = new System.Drawing.Size(40, 20);
             this.txtProteine.TabIndex = 11;
             this.txtProteine.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Proteine (g)";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader6.Width = 72;
             // 
             // label5
             // 
@@ -272,18 +303,6 @@
             this.txtSaturi.Size = new System.Drawing.Size(40, 20);
             this.txtSaturi.TabIndex = 15;
             this.txtSaturi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Grassi (g)";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader7.Width = 63;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Di cui Saturi (g)";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader8.Width = 90;
             // 
             // label7
             // 
@@ -348,12 +367,6 @@
             this.txtColest.TabIndex = 22;
             this.txtColest.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Colesterolo (mg)";
-            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader9.Width = 90;
-            // 
             // txtTotCol
             // 
             this.txtTotCol.Location = new System.Drawing.Point(757, 302);
@@ -362,18 +375,6 @@
             this.txtTotCol.Size = new System.Drawing.Size(84, 20);
             this.txtTotCol.TabIndex = 24;
             this.txtTotCol.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Carboidrati (g)";
-            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader10.Width = 79;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Zuccheri (g)";
-            this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader11.Width = 81;
             // 
             // label9
             // 
@@ -431,6 +432,7 @@
             // 
             // btnPrint
             // 
+            this.btnPrint.Enabled = false;
             this.btnPrint.Location = new System.Drawing.Point(963, 405);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(59, 28);
@@ -440,6 +442,7 @@
             // 
             // btnSalva
             // 
+            this.btnSalva.Enabled = false;
             this.btnSalva.Location = new System.Drawing.Point(888, 405);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(59, 28);
@@ -469,7 +472,7 @@
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -484,15 +487,26 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(12, 405);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(82, 28);
+            this.btnClear.TabIndex = 34;
+            this.btnClear.Text = "Azzera Tutto";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 446);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtTotZuc);
@@ -592,6 +606,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

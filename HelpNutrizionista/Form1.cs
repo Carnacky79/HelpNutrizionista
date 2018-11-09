@@ -13,7 +13,7 @@ namespace HelpNutrizionista
 {
     public partial class Form1 : Form
     {
-        private static OleDbConnection conn = new OleDbConnection("provider = Microsoft.Jet.OLEDB.4.0; Data Source = 'C:\\Users\\carna\\Desktop\\tabella_alimenti.xls'; Extended properties =\"Excel 8.0;HDR=YES;\"");
+        private static OleDbConnection conn = new OleDbConnection("provider = Microsoft.Jet.OLEDB.4.0; Data Source = 'tabella_alimenti.xls'; Extended properties =\"Excel 8.0;HDR=YES;\"");
         private static DataSet ds = new DataSet();
         private static DataTable dt = new DataTable();
         private static OleDbDataAdapter dataAdapt;
@@ -31,6 +31,10 @@ namespace HelpNutrizionista
         {
             dataAdapt = new OleDbDataAdapter("Select * From [Foglio4$]", conn);
             dataAdapt.TableMappings.Add("Table", "Alimenti");
+            dataAdapt.Fill(ds);
+            dataAdapt.Fill(ds);
+            dataAdapt.Fill(ds);
+            dataAdapt.Fill(ds);
             dataAdapt.Fill(ds);
 
             cb.DataSource = ds.Tables[0];
@@ -143,6 +147,18 @@ namespace HelpNutrizionista
         {
             AboutBox1 ab = new AboutBox1();
             ab.Show();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            txtTotCal.Text = "";
+            txtTotProt.Text = "";
+            txtTotGras.Text = "";
+            txtTotSat.Text = "";
+            txtTotCol.Text = "";
+            txtTotCarb.Text = "";
+            txtTotZuc.Text = "";
         }
     }
 }
