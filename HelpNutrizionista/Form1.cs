@@ -33,6 +33,10 @@ namespace HelpNutrizionista
             dataAdapt = new OleDbDataAdapter("Select * From [Foglio4$]", conn);
             dataAdapt.TableMappings.Add("Table", "Alimenti");
             dataAdapt.Fill(ds);
+            dataAdapt.Fill(ds);
+            dataAdapt.Fill(ds);
+            dataAdapt.Fill(ds);
+            dataAdapt.Fill(ds);
 
             cb.DataSource = ds.Tables[0];
             cb.DisplayMember = "Descrizione";
@@ -146,6 +150,7 @@ namespace HelpNutrizionista
             ab.Show();
         }
 
+
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             string writeLine = null;
@@ -212,6 +217,18 @@ namespace HelpNutrizionista
             {
                 printDocument1.Print();
             }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            txtTotCal.Text = "";
+            txtTotProt.Text = "";
+            txtTotGras.Text = "";
+            txtTotSat.Text = "";
+            txtTotCol.Text = "";
+            txtTotCarb.Text = "";
+            txtTotZuc.Text = "";
+
         }
     }
 }

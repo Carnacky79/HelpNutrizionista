@@ -77,8 +77,12 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+=======
+            this.btnClear = new System.Windows.Forms.Button();
+>>>>>>> fd6a8b0d2590bf3d1b449b7054cdca7bf294aab8
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,7 +132,7 @@
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(89, 405);
+            this.btnAggiungi.Location = new System.Drawing.Point(353, 405);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(59, 28);
             this.btnAggiungi.TabIndex = 6;
@@ -226,7 +230,7 @@
             // 
             // btnCalcola
             // 
-            this.btnCalcola.Location = new System.Drawing.Point(12, 405);
+            this.btnCalcola.Location = new System.Drawing.Point(276, 405);
             this.btnCalcola.Name = "btnCalcola";
             this.btnCalcola.Size = new System.Drawing.Size(59, 28);
             this.btnCalcola.TabIndex = 8;
@@ -434,6 +438,7 @@
             // 
             // btnPrint
             // 
+            this.btnPrint.Enabled = false;
             this.btnPrint.Location = new System.Drawing.Point(963, 405);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(59, 28);
@@ -444,6 +449,7 @@
             // 
             // btnSalva
             // 
+            this.btnSalva.Enabled = false;
             this.btnSalva.Location = new System.Drawing.Point(888, 405);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(59, 28);
@@ -493,6 +499,7 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -507,12 +514,24 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+=======
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(12, 405);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(82, 28);
+            this.btnClear.TabIndex = 34;
+            this.btnClear.Text = "Azzera Tutto";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+>>>>>>> fd6a8b0d2590bf3d1b449b7054cdca7bf294aab8
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 446);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtTotZuc);
@@ -612,8 +631,12 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+
+        private System.Windows.Forms.Button btnClear;
+
     }
 }
 
