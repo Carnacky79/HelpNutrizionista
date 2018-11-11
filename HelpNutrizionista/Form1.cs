@@ -8,14 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Word;
 
 namespace HelpNutrizionista
 {
     public partial class Form1 : Form
     {
-        private static OleDbConnection conn = new OleDbConnection("provider = Microsoft.Jet.OLEDB.4.0; Data Source = 'C:\\Users\\carna\\Desktop\\tabella_alimenti.xls'; Extended properties =\"Excel 8.0;HDR=YES;\"");
+        private static OleDbConnection conn = new OleDbConnection("provider = Microsoft.Jet.OLEDB.4.0; Data Source = 'tabella_alimenti.xls'; Extended properties =\"Excel 8.0;HDR=YES;\"");
         private static DataSet ds = new DataSet();
-        private static DataTable dt = new DataTable();
+        private static System.Data.DataTable dt = new System.Data.DataTable();
         private static OleDbDataAdapter dataAdapt;
         public Form1()
         {
@@ -143,6 +144,74 @@ namespace HelpNutrizionista
         {
             AboutBox1 ab = new AboutBox1();
             ab.Show();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string writeLine = null;
+            int pointY = 200;
+
+            foreach (ListViewItem itemRow in this.listView1.Items)
+            {
+                e.Graphics.DrawString(itemRow.SubItems[1].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(100, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[2].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(300, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[3].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(350, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[4].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(400, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[5].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(450, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[6].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(500, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[7].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(550, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[8].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(600, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[9].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(650, pointY));
+                e.Graphics.DrawString(itemRow.SubItems[10].Text, new System.Drawing.Font("Arial", 10, FontStyle.Regular), Brushes.Black, new PointF(700, pointY));
+
+                pointY += 20;
+            }
+            
+        }
+
+        private void btnSalva_Click(object sender, EventArgs e)
+        {
+            string str = null;
+            SaveFileDialog dia = new SaveFileDialog();
+            dia.Filter = "Word Document (docx) | *.docx | Word Document (doc) | *.doc";
+            if (dia.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+
+                str = dia.FileName;
+
+                object oMissing = System.Reflection.Missing.Value;
+
+                //Start Word and create a new document.
+                Microsoft.Office.Interop.Word._Application oWord = new Microsoft.Office.Interop.Word.Application();
+
+                Microsoft.Office.Interop.Word._Document oDoc = new Microsoft.Office.Interop.Word.Document();
+
+                oWord.Visible = true;
+
+                oDoc = oWord.Documents.Add(ref oMissing, ref oMissing, ref oMissing, ref oMissing);
+
+                //Insert a paragraph at the beginning of the document.
+                Microsoft.Office.Interop.Word.Paragraph oPara1;
+
+                oPara1 = oDoc.Content.Paragraphs.Add(ref oMissing);
+                oPara1.Range.Text = "Dieta Personalizzata";
+                oPara1.Range.Font.Bold = 1;
+                oPara1.Range.Font.Name = "Arial";
+                oPara1.Format.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                oPara1.Format.SpaceAfter = 24;    //24 pt spacing after paragraph.
+
+                oDoc.SaveAs2(str);
+
+                oDoc.Close();
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
         }
     }
 }
