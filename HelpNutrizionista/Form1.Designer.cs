@@ -77,12 +77,12 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
+
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-=======
+
             this.btnClear = new System.Windows.Forms.Button();
->>>>>>> fd6a8b0d2590bf3d1b449b7054cdca7bf294aab8
+
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -499,7 +499,7 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-<<<<<<< HEAD
+
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -514,7 +514,7 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-=======
+
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(12, 405);
@@ -524,7 +524,7 @@
             this.btnClear.Text = "Azzera Tutto";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
->>>>>>> fd6a8b0d2590bf3d1b449b7054cdca7bf294aab8
+
             // 
             // Form1
             // 

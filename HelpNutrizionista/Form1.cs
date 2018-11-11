@@ -49,7 +49,7 @@ namespace HelpNutrizionista
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private string PerCent(string ingresso, string molti)
@@ -87,7 +87,7 @@ namespace HelpNutrizionista
 
             foreach (ListViewItem itemRow in this.listView1.Items)
             {
-                
+
                 sumKcal += Convert.ToDouble(itemRow.SubItems[4].Text);
                 sumProt += Convert.ToDouble(itemRow.SubItems[5].Text);
                 sumGras += Convert.ToDouble(itemRow.SubItems[6].Text);
@@ -171,7 +171,7 @@ namespace HelpNutrizionista
 
                 pointY += 20;
             }
-            
+
         }
 
         private void btnSalva_Click(object sender, EventArgs e)
@@ -213,10 +213,13 @@ namespace HelpNutrizionista
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
             }
+
+
+        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
